@@ -1,1 +1,3 @@
 # ProjetTIM2
+
+Ici, dossier correspondant à votre workspace de CooCox, y ajouter les différentes librairies, fichiers C ect ...
