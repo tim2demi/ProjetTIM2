@@ -2,14 +2,6 @@
 #include "stm32f4xx_rcc.h"
 
 
-void I2C_DeInit()
-{
-    /* Enable I2C1 reset state */
-    RCC_APB1PeriphResetCmd(RCC_APB1Periph_I2C1, ENABLE);
-    /* Release I2C1 from reset state */
-    RCC_APB1PeriphResetCmd(RCC_APB1Periph_I2C1, DISABLE);    
- }
-
 
 /**
   * @brief  Initializes the I2Cx peripheral according to the specified 
@@ -32,6 +24,11 @@ void I2C_Init()
   uint32_t pclk1 = 8000000;
   RCC_ClocksTypeDef  rcc_clocks;
 
+
+  /* Enable I2C1 reset state */
+  RCC_APB1PeriphResetCmd(RCC_APB1Periph_I2C1, ENABLE);
+      /* Release I2C1 from reset state */
+  RCC_APB1PeriphResetCmd(RCC_APB1Periph_I2C1, DISABLE);
   IS_I2C_ALL_PERIPH(I2C1));
   InitStructI2C.IS_I2C_CLOCK_SPEED(I2C_ClockSpeed);
   assert_param(IS_I2C_MODE(I2C_InitStruct->I2C_Mode));
