@@ -1,3 +1,3 @@
 #include c.c
 
-printf("yoyo");
+printf("yayo");
