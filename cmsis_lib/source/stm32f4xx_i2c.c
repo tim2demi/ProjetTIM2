@@ -26,7 +26,7 @@ void init_I2C1(void){
 	GPIO_InitStruct.GPIO_PuPd = GPIO_PuPd_UP;			// enable pull up resistors
 	GPIO_Init(GPIOB, &GPIO_InitStruct);					// init GPIOB
 
-	// Connect I2C1 pins to AF
+	// Connect I2C1 pins to AF (Alternate_Fonction)
 	GPIO_PinAFConfig(GPIOB, GPIO_PinSource6, GPIO_AF_I2C1);	// SCL
 	GPIO_PinAFConfig(GPIOB, GPIO_PinSource7, GPIO_AF_I2C1); // SDA
 
